@@ -1,3 +1,19 @@
+/* let divNumber;
+    cy.get('.my-auto').then((number) => {
+      divNumber = number.text().split(' ').pop();
+    });
+    cy.get(divNumber).should('be.lessThan', 150); */
+
+    /* cy.get('.my-auto')
+      .invoke('text')
+      .then((text) => {
+        const fullText = text;
+        const pattern = /[0-9]+/g;
+        const number = fullText.match(pattern);
+        console.log(number);
+      })
+      .should('be.lessThan', 100); */
+
 /* describe("My First Test", () => {
   it("Visits the Kitchen Sink", () => {
     cy.visit("http://localhost:1111/");
@@ -37,7 +53,7 @@
     cy.get('.action-email').should('have.value', 'fake@email.com')
   })
 }) */
-/* 
+/*
 it("Does not do much!", () => {
   expect("Ultra shipping").to.equal("Ultra shipping");
 }); */
@@ -46,25 +62,9 @@ it("Does not do much!", () => {
   it("Does not do much!", () => {
     cy.visit("http://localhost:1111/");
 
-
     expect("Home").to.equal("Home");
   });
 });
  */
 
-describe("Test decision tables", () => {
-  it("Gets, types and asserts", () => {
-    cy.visit("/");
-
-    cy.contains("Add to cart").click();
-    cy.contains("Cart").click();
-
-    cy.contains("Ultra shipping").should("not.equal", "Jane");
-
-    cy.contains("+").click();
-    cy.contains("+").click();
-    cy.get("[data-cartid=646034e252af523f68793bf0]").click();
-
-    // cy.contains("Checkout").click();
-  });
-});
+ 

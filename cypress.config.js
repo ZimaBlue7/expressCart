@@ -1,7 +1,11 @@
-const { defineConfig } = require("cypress");
+/* eslint-disable comma-dangle */
+/* eslint-disable space-before-blocks */
+const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: "http://localhost:1111/",
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+    },
   },
 });
